@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.aquapage{
+    height: 100vh;
+    background-color: aqua;
+}
+
+.brownbox{
+    background-color: saddlebrown;
+    width: 100px;
+    height: 25px;
+    position: absolute;
+    top: 47%; 
+    left: 47%; 
+}
+
+.screen2{
+    min-height: 100vh;
+    background-color: saddlebrown;
+    text-align: center;
+    padding: 100px 50px;
+    color: white;
+}
+
+
+.space{
+    width: 33.33%;
+    height: 200px;
+    float: left;
+    margin: 30px 0;
+}
+
+.whiteboxes{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top: 70%;
+    left: 27%;
+    background-color: white;
+}
