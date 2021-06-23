@@ -42,6 +42,12 @@
 }
 
 .mycarousel{
-    height: 100vh;
+    height: 1000px;
+    width: 550px;
+    position: absolute;
+    left: 33%;
+    top: 12%;
+    
+  
     
 }
