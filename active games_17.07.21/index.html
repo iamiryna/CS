@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Active Games</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .wrap{
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0,255,255, 1), rgba(0, 255, 191, .5));
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .rounds{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: flex-start;
+            z-index: auto;
+            position: absolute;
+        }
+        
+        .round1{
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255,255,255, .7);
+            border-radius: 50%;
+            margin-left: 1100px;
+            margin-bottom: 100px;
+        }
+        
+        .round2{
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255,255,255, .7);
+            border-radius: 50%;
+            margin-left: 200px;
+            
+        }
+        
+        .box{
+            width: 60%;
+            height: 95vh;
+            background-color: rgba(255,255,255, .7);
+            border-radius: 20px;
+            display: flex;
+        }
+        .box1{
+            width:30%;
+            height: 95vh;
+            background-color: rgba(255,255,255, .5);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .simo{
+            width: 60px;
+            height: 60px;
+            background-image: url(img/avatar.png);
+            border-radius: 50%;
+            background-size: cover;
+        }
+        
+        h6{
+            color:steelblue;
+            font-weight: 100;
+            font-family: arial;
+        }
+        
+        .sixh{
+            font-weight: 900;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+        
+        .avatar{
+            width: 100%;
+            height: 150px;
+            /*background-color: aqua;*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .icons{
+            width: 100%;
+            height: 350px;
+            /*background-color: aqua;*/
+            color: steelblue;
+            font-family: arial;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .icon1{
+            width: 25px;
+            height: 25px;
+            background-image: url(img/twitch.png);
+            background-size: cover;
+            margin-right: 20px;
+        }
+        
+        .streams{
+            display: flex;
+            align-items: center;
+            
+        }
+        
+        .icon2{
+            width: 25px;
+            height: 25px;
+            background-image: url(img/steam.png);
+            background-size: cover;
+            margin-right: 20px;
+        }
+        
+        .icon3{
+            width: 25px;
+            height: 25px;
+            background-image: url(img/upcoming.png);
+            background-size: cover;
+            margin-right: 20px;
+        }
+        
+        .icon4{
+            width: 25px;
+            height: 25px;
+            background-image: url(img/library.png);
+            background-size: cover;
+            margin-right: 20px;
+        }
+        
+        .new{
+            margin-right: 30px;
+        }
+        
+        .games{
+            margin-right: 10px;
+        }
+        
+        .library{
+            margin-right: 10px;
+        }
+        
+        .join{
+            width: 80%;
+            height: 105px;
+            background: linear-gradient(rgba(0,255,255, 1), rgba(0, 255, 191, .4));
+            border-radius: 25px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        
+        .photojoin{
+            width: 90px;
+            height: 100px;
+            background-image: url(img/controller.png);
+            background-size: cover;
+        }
+        
+        h4{
+            color: white;
+            font-size: 18px;
+            font-family: arial;
+            text-align: center;
+        }
+        
+        .box2{
+            width:70%;
+            height: 95vh;
+            
+           /* background-color: rgba(255,255,255, .5);*/
+            border-radius: 20px;
+            
+            /*display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;*/
+        }
+        
+        .topright{
+            width: 100%;
+            height: 200px;
+           /*background-color: red;*/
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        .sixh2{
+            font-weight: 900;
+            font-size: 30px;
+            margin-left: 50px;
+        }
+        
+        .emphasis{
+            width: 200px;
+            height: 20px;
+            background-color: rgba(255,255,255, .7);
+            border-radius: 10px;
+            margin-left: 50px;
+        }
+        
+        .bottomright{
+            width: 100%;
+            height: 515.5px;
+            /*background-color: red;*/
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .assassins{
+            width: 550px;
+            height: 100px;
+            background-color: rgba(255,255,255, 1);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 5px 3px 10px grey;
+        }
+        
+        .icon11{
+            width: 70px;
+            height: 70px;
+            background-image: url(img/assassins.png);
+            background-size: cover;
+        }
+        
+        .greenbox{
+            width: 200px;
+            height: 20px;
+            background-color: floralwhite;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        
+        .percents{
+            margin-bottom: 45px;
+        }
+        
+        .percentstext{
+            color: turquoise;
+        }
+        
+        .asstext{
+            color: steelblue;
+            font-weight: 600;
+            font-family: arial;
+            margin-bottom: 5px;
+        }
+        
+        
+        
+        .greeny{
+            width: 60%;
+            height: 20px;
+            background: linear-gradient(rgba(0,255,255, 1), rgba(0, 255, 191, .5));
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        
+        .icon12{
+            width: 70px;
+            height: 70px;
+            background-image: url(img/sackboy.png);
+            background-size: cover;
+        }
+        
+        .icon13{
+            width: 70px;
+            height: 70px;
+            background-image: url(img/spiderman.png);
+            background-size: cover;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="wrap">
+    
+     <div class="rounds">
+        <div class="round1"></div>
+        <div class="round2"></div>
+        </div>
+      
+       <div class="box">
+           
+            <div class="box1">
+               
+               <div class="avatar">
+                <div class="simo"></div>
+                <h6 class="sixh">Simo Edwin</h6>
+                <h6 class="pro">Pro member</h6></div>
+                
+                
+                
+                
+                <div class="icons">
+                   
+                   <div class="streams">
+                    <div class="icon1"></div>
+                    <h3>Streams</h3></div>
+                    
+                   <div class="streams games">
+                    <div class="icon2"></div>
+                    <h3>Games</h3></div>
+                    
+                    <div class="streams new">
+                    <div class="icon3"></div>
+                    <h3>New</h3></div>
+                    
+                    <div class="streams library">
+                    <div class="icon4"></div>
+                    <h3>Library</h3></div>
+                </div>
+                
+                <div class="join">
+                   <h4>Join pro <br> for free <br> games. </h4>
+                    <div class="photojoin"></div>
+                </div>
+                
+            </div>
+            
+            <div class="box2">
+              
+              <div class="topright">
+              <h6 class="sixh2">Active Games</h6>
+               <div class="emphasis"></div></div>
+               
+               <div class="bottomright">
+                  
+                   <div class="assassins">
+                   
+                   <div class="iconbox">
+                    <div class="icon11"></div></div>
+                    
+                    <div class="logobox">
+                    <h3 class="asstext" >Assassins Creed Valhalla</h3>
+                    <h6> PS5 Version </h6>
+                    
+                    <div class="greenbox">
+                        <div class="greeny">
+                        <div class="peachy"></div>
+                        </div>
+                    </div>
+                     </div>
+                    
+                    <div class="percents">
+                    <h4 class="percentstext">60%</h4></div>
+                    
+                    </div>
+                    
+                    <div class="assassins">
+                   
+                   <div class="iconbox">
+                    <div class="icon12"></div></div>
+                    
+                    <div class="logobox">
+                    <h3 class="asstext" >Sackboy A Great Adventure</h3>
+                    <h6> PS5 Version </h6>
+                    
+                    <div class="greenbox">
+                        <div class="greeny">
+                        <div class="peachy"></div>
+                        </div>
+                    </div>
+                     </div>
+                    
+                    <div class="percents">
+                    <h4 class="percentstext">60%</h4></div>
+                    
+                    </div>
+                    
+                    <div class="assassins">
+                   
+                   <div class="iconbox">
+                    <div class="icon13"></div></div>
+                    
+                    <div class="logobox">
+                    <h3 class="asstext" >Spiderman Miles Morales</h3>
+                    <h6> PS5 Version </h6>
+                    
+                    <div class="greenbox">
+                        <div class="greeny">
+                        <div class="peachy"></div>
+                        </div>
+                    </div>
+                     </div>
+                    
+                    <div class="percents">
+                    <h4 class="percentstext">60%</h4></div>
+                    
+                    </div>
+                    
+                    
+                    
+                   <div class="sackboy"></div>
+                   
+                   <div class="spiderman"></div>
+                   
+               </div>
+                
+            </div>
+            
+        </div>
+        
+       
+        
+        
+        
+    </div>
+</body>
+</html>
