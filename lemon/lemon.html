@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lemon</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .wrap{
+            height: 100vh;
+            width: 100%;
+            background-image: url(bg.png);               
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header{
+            height: 10vh;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 100px;
+            position: fixed;
+        }
+        
+        .logo{
+            color: white;
+            font-size: 30px;
+            font-weight: 900;
+            color: #DAA520;
+        }
+        
+        .logo:first-letter{
+                color: white;
+                font-size: 45px;
+            }
+        
+        .lemon{
+            width: 25px;
+            height: 25px;
+            background-image: url(lemon.png);
+            background-size: cover;
+        }
+        .textlogo{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        a{
+            text-decoration: none;
+            color: white;
+            margin-right: 30px;
+        }
+        
+        
+        
+        .main{
+            height: 90vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        h2{
+            color: antiquewhite;
+            font-size: 60px;
+            font-family: calibri;
+            letter-spacing: -2px;
+            position: relative;
+            top: -5%;
+        }
+        
+        .btn{
+            background-color: transparent;
+            padding: 15px 40px;
+            color: white;
+            border-radius: 10px;
+            border: 2px solid  antiquewhite;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 100;
+            position: relative;
+            top: -2%;
+        }
+        
+        .btn:hover{
+            color: #DAA520;
+            background-color: antiquewhite;
+            border: 3px solid  #DAA520;
+        }
+        
+        .btn:active{
+            top: 3px;
+        }
+        
+        
+        .wrap2{
+            height: 100vh;
+            width: 100%;
+            background-color: #ffefd5;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .top{
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .hours{
+            width: 50px;
+            height: 50px;
+            background-image: url(1.png);
+            background-size: cover;
+        }
+        
+        .task{
+            width: 50px;
+            height: 50px;
+            background-image: url(2.png);
+            background-size: cover;
+        }
+        .hands{
+            width: 50px;
+            height: 50px;
+            background-image: url(3.png);
+            background-size: cover;
+        }
+        
+        
+        
+        .bottom{
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .puzzle{
+            width: 50px;
+            height: 50px;
+            background-image: url(4.png);
+            background-size: cover;
+        }
+        
+        .money{
+            width: 50px;
+            height: 50px;
+            background-image: url(5.png);
+            background-size: cover;
+        }
+        
+        .people{
+            width: 50px;
+            height: 50px;
+            background-image: url(6.png);
+            background-size: cover;
+        }
+        
+        
+        .excellent{
+            width: 200px;
+            font-size: 10px;
+            margin-top: 100px;
+            margin-left: -30px;
+        }
+        
+        .taking{
+            width: 150px;
+            font-size: 10px;
+            margin-top: 90px;
+            margin-left: -50px;
+            text-align: center;
+        }
+        
+        .fostering{
+            width: 150px;
+            font-size: 10px;
+            margin-top: 90px;
+            margin-left: -50px;
+            text-align: center;
+        }
+        .adhering{
+            width: 150px;
+            font-size: 10px;
+            margin-top: 90px;
+            margin-left: -50px;
+            text-align: center;
+        }
+        .delivering{
+            width: 150px;
+            font-size: 10px;
+            margin-top: 100px;
+            margin-left: -50px;
+            text-align: center;
+        }
+        .thebest{
+            width: 150px;
+            font-size: 10px;
+            margin-top: 100px;
+            margin-left: -50px;
+            text-align: center;
+        }
+        
+        .wrap3{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .box1{
+            width: 50%;
+            height: 100vh;
+            background-color: #fffc9d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .box2{
+            width: 50%;
+            height: 100vh;
+            background-image: url(lemonback.png);
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .since{
+            font-family: arial;
+            font-weight: 500;
+        }
+        
+        .parsince{
+            width: 90%;
+            height: 52%;
+            /*background-color: aqua;*/
+        }
+        
+        .recruitmenthas{
+            font-size: 30px;    
+            color: white;
+            font-family: calibri;
+            text-align: end;
+        }
+        
+        .recruitment{
+            /*background-color: aqua;*/
+            width: 90%;
+            height: 110px;
+        }
+        
+        
+        
+         .wrap4{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        
+        .box11{
+            width: 50%;
+            height: 100vh;
+            background-image: url(bg2.jpg);
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .ouraim{
+            font-size: 30px;    
+            color: white;
+            font-family: calibri;
+            text-align: start;
+        }
+        
+        .aim{
+            /*background-color: aqua;*/
+            width: 90%;
+            height: 35px;
+        }
+        
+        .box22{
+            width: 50%;
+            height: 100vh;
+            background-color: #fffc9d;;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .our{
+            font-family: arial;
+            font-weight: 500;
+            text-align: end;
+        }
+        
+        .parour{
+            width: 90%;
+            height: 320px;
+            /*background-color: aqua;*/
+        }
+        
+        .wrap5{
+            width: 100%;
+            height: 100vh;
+            background-color: #ffefd5
+            /*display: flex;
+            flex-direction: row;*/
+        }
+        
+        .topcom{
+            /*background-color: aqua;*/
+            width: 100%;
+            height: 30%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .com{
+            font-family: arial;
+            font-size: 25px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            margin-top: 85px
+        }
+        
+        .bottomcom{
+            /*background-color: teal;*/
+            width: 100%;
+            height: 70%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .photo{
+            width: 100px;
+            height: 100px;
+            background-image: url(photo.png);
+            background-size: cover;
+        }
+        
+        .julia{
+            width: 23%;
+            height: 80%;
+            /*background-color: azure;*/
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .aboutjulia{
+            margin-top: 15px;
+        }
+        
+        .name{
+            margin-top: 10px;
+            font-family: arial;
+        }
+        
+        .btnjul{
+            background-color: transparent;
+            padding: 8px 17px;
+            color: black;
+            border-radius: 3px;
+            border: 1px solid  black;
+            cursor: pointer;
+            margin-top: 40px;
+            font-size: 13px;
+        }
+        
+        .btnjul:hover{
+            color: white;
+            background-color: transparent;
+            border: 3px solid  white;
+        }
+        
+        .photo2{
+            width: 100px;
+            height: 100px;
+            background-image: url(photo1.png);
+            background-size: cover;
+        }
+    
+    </style>
+</head>
+<body>
+  <div class="wrap">
+    
+     <div class="header">
+        <div class="textlogo">
+         <div class="lemon"></div>
+         <div class="logo">Lemon.inc</div> 
+         </div>
+          
+                <div class="row"> 
+                        <a href="#">HOME</a>
+                        <a href="#">VACANCIES</a>
+                        <a href="#">STAR CANDIDATES</a>
+                        <a href="#">CONTACTS</a>
+                </div>
+     </div>
+     
+     <div class="main">  
+               
+                <h2>A fresh approach to</h2>
+                 <h2>recruitment </h2>
+                 <div class="btn"> Read more </div>
+        </div>  
+     
+     </div>
+     
+     <div class="wrap2">
+<!--
+         <div class="header">
+        <div class="textlogo">
+         <div class="lemon"></div>
+         <div class="logo">Lemon.inc</div> 
+         </div>
+          
+                <div class="row"> 
+                        <a href="#">HOME</a>
+                        <a href="#">VACANCIES</a>
+                        <a href="#">STAR CANDIDATES</a>
+                        <a href="#">CONTACTS</a>
+                </div>
+     </div>
+-->
+     
+     <div class="top">
+       <div class="hours"><p class="excellent"><b>Excellent service delivery</b></p></div>
+       <div class="task"><p class="taking"><b>Taking initiative and accountability</b></p></div>
+       <div class="hands"><p class="fostering"><b>Fostering value added partnerships and co-operations</b></p></div>
+     </div>
+     
+     
+      
+      <div class="bottom">
+       <div class="puzzle"><p class="adhering"><b>Adhering to all relevant labour legislation</b></p></div>
+       <div class="money"><p class="delivering"><b>Delivering value for money</b></p></div>
+       <div class="people"><p class="thebest"><b>Thye best staffing</b></p></div>
+     </div>
+     
+     </div>
+     
+     <div class="wrap3">
+         
+         <div class="box1">
+            
+            <div class="parsince">
+             <p class="since">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consectetur et nisi ipsum, tempora sapiente corporis totam! Quod doloremque vero dolorum placeat nostrum ipsa nihil voluptatem inventore dicta? Ducimus natus non necessitatibus dolorum esse atque quasi modi molestiae repellendus, fugit tempora, iusto voluptatem, consequatur mollitia eaque adipisci amet quia nihil voluptatibus rerum error sunt iste voluptatum temporibus suscipit. Quae numquam totam possimus quas! Dolor illo nihil vero eaque, suscipit eveniet voluptas quos libero iste illum! Omnis rem sequi aperiam quidem facilis consequuntur modi suscipit dolore? Quidem ratione vitae at vel officia labore cupiditate. Ataliquid, quod accusantium enim, dolor harum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt tenetur a aspernatur tempore atque laborum itaque delectus perspiciatis dignissimos eveniet, tempora quia enim ducimus nihil, omnis ullam accusantium, facere et. <br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim necessitatibus facere nobis perferendis voluptates tempore perspiciatis officiis alias dolorem nemo tenetur exercitationem ex eius asperiores eum, aut reprehenderit soluta itaque minima. Quas laudantium culpa tempora sapiente numquam, adipisci deserunt velit ipsa rem quia similique sequi quidem consectetur! Vero, vel, ratione? <br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem perferendis vero totam. Nobis magni sint, voluptate dolorem et, laboriosam quidem unde dignissimos officia provident a nesciunt quisquam, hic cupiditate repellendus.
+              </p></div>
+         </div>
+         
+         <div class="box2">
+             <div class="recruitment">
+                 <p class="recruitmenthas"> Lemon.Inc Recruitment has taken <br> a fresh approach to recruitment ... and <br> more!</p>
+             </div>
+             
+         </div>
+         
+         
+     </div>
+     
+     <div class="wrap4">
+        
+         <div class="box11">
+             <div class="aim">
+                 <p class="ouraim"> Our Aim</p>
+             </div>
+             
+         </div>
+         
+         
+         <div class="box22">
+         <div class="parour">
+             <p class="our"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem provident labore, quibusdam culpa tempora illum officiis voluptatem, fugiat dicta aliquid saepe commodi recusandae reprehenderit nobis, impedit rem autem. Doloribus voluptas vero nobis ea minus. Pariatur reprehenderit vero perferendis, ut ex, vitae. Labore necessitatibus neque eveniet itaque tenetur, similique expedita aliquam velit fugiat id ratione explicabo obcaecati eius sequi sapiente repellendus vero, ullam nam autem magnam illo ipsum, a ducimus officiis. Officiis nam ipsum eveniet at repellat incidunt perferendis provident quas ipsam dolores possimus laudantium cupiditate est quia, magni distinctio illum nemo non! Aspernatur incidunt quisquam doloremque rem rerum voluptatibus ex nulla sapiente blanditiis commodi sint error, voluptates consequatur accusantium maiores a, quas praesentium, adipisci ea inventore exercitationem reprehenderit eius amet. Porro, ratione eius deleniti vitae nobis cumque optio in voluptatem perferendis sequi accusantium labore ullam quo sit explicabo deserunt, facilis neque laboriosam! 
+             <br> <br> Esse adipisci numquam autem fugit voluptate, a deserunt blanditiis quod tenetur vel vitae consequatur dicta perspiciatis nesciunt possimus eaque? Harum earum perspiciatis quae, itaque placeat molestiae, officiis, ratione autem dignissimos veniam delectus adipisci fuga aliquam, accusantium.  </p>
+         </div>
+         </div>
+     </div>
+     
+     <div class="wrap5">
+         
+         <div class="topcom">
+             <h3 class="com">COMMENTS</h3>
+         </div>
+         
+         <div class="bottomcom">
+            
+            <div class="julia">
+             <div class="photo"></div>
+             <h4 class="name">Julia</h4>
+             <p class="aboutjulia">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam impedit fugit sed, repellendus obcaecati quas rerum architecto delectus vel nisi sint quasi amet, deleniti accusamus cum error ipsa ducimus a!</p>
+              <div class="btnjul"> Read  </div>
+               </div> 
+               
+    
+               
+               <div class="julia">
+             <div class="photo2"></div>
+             <h4 class="name">Lilia</h4>
+             <p class="aboutjulia">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam impedit fugit sed, repellendus obcaecati quas rerum architecto delectus vel nisi sint quasi amet, deleniti accusamus cum error ipsa ducimus a!</p>
+              <div class="btnjul"> Read  </div>
+               </div>
+               
+               
+               
+               <div class="julia">
+             <div class="photo"></div>
+             <h4 class="name">Maria</h4>
+             <p class="aboutjulia">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam impedit fugit sed, repellendus obcaecati quas rerum architecto delectus vel nisi sint quasi amet, deleniti accusamus cum error ipsa ducimus a!</p>
+              <div class="btnjul"> Read  </div>
+               </div>
+             
+             
+         </div>
+         
+     </div>
+   
+    
+</body>
+</html>
