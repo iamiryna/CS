@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        
+        #redbox{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        
+        .wrap{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="wrap"> 
+    <div id="redbox"></div>
+    </div>
+    <script>
+//        task 1
+//        redbox.onmouseenter = function(){
+//            redbox.style.backgroundColor = "yellow";
+//            redbox.style.border = "2px dotted black";
+//        }
+        
+//        redbox.onmouseleave = function(){
+//            redbox.style.backgroundColor = "green";
+//            redbox.style.border = "none";
+//        }
+        
+        
+        
+        
+        
+        
+        
+//        task 2
+        let clk = 0;
+        redbox.onclick = function(){
+            if(clk == 0){
+            redbox.style.backgroundColor = "green";
+                clk++;
+            }
+            else if(clk == 1){
+                redbox.style.backgroundColor = "blue";
+                clk++;
+            }
+            else if(clk == 2){
+                redbox.style.backgroundColor = "pink";
+                clk++;
+            }
+            else if(clk == 3){
+                redbox.style.backgroundColor = "orange";
+                clk++;
+            } 
+            else if(clk == 4){
+                redbox.style.backgroundColor = "aqua";
+                clk++;
+            } 
+        }
+        
+        
+//        тут я намагалась з масивом якось, але щось не виходить.
+//        let colors = ["red", "green", "blue", "pink", "orange", "aqua"]
+//        redbox.onclick = function(){
+//            redbox.style.backgroundColor = colors[];
+//            colors++;
+//        }
+         </script>
+</body>
+</html>
+        
